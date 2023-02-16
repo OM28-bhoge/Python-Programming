@@ -1,5 +1,16 @@
-## Creating A List : 
+# Lists
+# List is a collection data type which is ordered and mutable. Unlike Sets, Lists allow duplicate elements. They are useful for preserving a sequence of data and further iterating over it. Lists are created with square brackets.
 
+my_list = ["banana", "cherry", "apple"]
+
+# Comparison of basic built-in collection data types in Python:
+# List is a collection which is ordered and mutable. Allows duplicate members.
+# Tuple is a collection which is ordered and immutable. Allows duplicate members.
+# Set is a collection which is unordered and unindexed. No duplicate members.
+# Dictionary is a collection which is unordered, mutable and indexed. No duplicate members.
+# Strings are immutable sequences of Unicode code points.
+# Creating a list
+# Lists are created with square brackets or the built-in list function.
 
 list_1 = ["banana", "cherry", "apple"]
 print(list_1)
@@ -15,10 +26,12 @@ print(list_3)
 # Lists allow duplicates
 list_4 = [0, 0, 1, 1]
 print(list_4)
-
-
-## Access elements : 
-
+# ['banana', 'cherry', 'apple']
+# []
+# [5, True, 'apple']
+# [0, 0, 1, 1]
+# Access elements
+# You access the list items by referring to the index number. Note that the indices start at 0.
 
 item = list_1[0]
 print(item)
@@ -27,18 +40,17 @@ print(item)
 # -2 to the second last item, and so on
 item = list_1[-1]
 print(item)
-
-
-##Change Items : 
-
+# banana
+# apple
+# Change items
+# Just refer to the index number and assign a new value.
 
 # Lists can be altered after their creation
 list_1[2] = "lemon"
 print(list_1)
-
-
-##Useful Methods :
-
+# ['banana', 'cherry', 'lemon']
+# Useful methods
+# Have a look at the Python Documentation to see all list methods: https://docs.python.org/3/tutorial/datastructures.html
 
 my_list = ["banana", "cherry", "apple"]
 
@@ -89,10 +101,18 @@ print(list_concat)
 # convert string to list
 string_to_list = list('Hello')
 print(string_to_list)
-
-
-## Copy a List
-
+# Length: 3
+# ['banana', 'blueberry', 'cherry', 'apple', 'orange']
+# Popped item:  orange
+# ['banana', 'blueberry', 'apple']
+# []
+# Reversed:  ['apple', 'cherry', 'banana']
+# Sorted:  ['apple', 'banana', 'cherry']
+# [0, 0, 0, 0, 0]
+# [0, 0, 0, 0, 0, 'banana', 'cherry', 'apple']
+# ['H', 'e', 'l', 'l', 'o']
+# Copy a list
+# Be careful when copying references.
 
 list_org = ["banana", "cherry", "apple"]
 
@@ -116,27 +136,25 @@ list_copy = list_org.copy()
 list_copy.append(True)
 print(list_copy)
 print(list_org)
-
-
-## Iterating : 
-
-
+# ['banana', 'cherry', 'apple', True]
+# ['banana', 'cherry', 'apple', True]
+# ['banana', 'cherry', 'apple', True]
+# ['banana', 'cherry', 'apple']
+# Iterating
 # Iterating over a list by using a for in loop
 for i in list_1:
     print(i)
-    
-
-## Check if an item exists :
-
-
+# banana
+# cherry
+# lemon
+# Check if an item exists
 if "banana" in list_1:
     print("yes")
 else:
     print("no")
-    
-    
-## Slicing : 
-
+# yes
+# Slicing
+# Access sub parts of the list wih the use of colon (:), just as with strings.
 
 # a[start:stop:step], default step is 1
 a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
@@ -154,18 +172,27 @@ a = a[::-1] # reverse the list with a negative step:
 print(a)
 b = a[:] # copy a list with slicing
 print(b)
+# [2, 3]
+# [3, 4, 5, 6, 7, 8, 9, 10]
+# [1, 2, 3]
+# [0, 4, 5, 6, 7, 8, 9, 10]
+# [0, 5, 7, 9]
+# [10, 9, 8, 7, 6, 5, 4, 0]
+# [10, 9, 8, 7, 6, 5, 4, 0]
+# List comprehension
+# A elegant and fast way to create a new list from an existing list.
 
-
-## List comprehension :
+# List comprehension consists of an expression followed by a for statement inside square brackets.
 
 a = [1, 2, 3, 4, 5, 6, 7, 8]
 b = [i * i for i in a] # squares each element
 print(b)
-
-
-## Nested lists :
-
+# [1, 4, 9, 16, 25, 36, 49, 64]
+# Nested lists
+# Lists can contain other lists (or other container types).
 
 a = [[1, 2], [3, 4]]
 print(a)
-print(a[0]) 
+print(a[0])
+# [[1, 2], [3, 4]]
+# [1, 2]
