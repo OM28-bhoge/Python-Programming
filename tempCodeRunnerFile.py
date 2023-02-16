@@ -1,1 +1,2 @@
-10
+
+# item = mylist.remove("cherry")
