@@ -35,6 +35,7 @@ print(list_4)
 # []
 # [5, True, 'apple']
 # [0, 0, 1, 1]
+
 # Access elements
 # You access the list items by referring to the index number. Note that the indices start at 0.
 
@@ -61,7 +62,7 @@ my_list = ["banana", "cherry", "apple"]
 
 # len() : get the number of elements in a list
 print("Length:", len(my_list))
-
+# print.len(my_list)
 # append() : adds an element to the end of the list
 my_list.append("orange")
 
