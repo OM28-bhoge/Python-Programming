@@ -1,4 +1,5 @@
-size = int(input("Enter the size of the triangle: "))
-
-for i in range(size, 0, -1):
-    print("* " * i)
+rows = 5
+for i in range(rows + 1, 0, -1):
+    for j in range(0, i - 1):
+        print("*", end=' ')
+    print(" ")
