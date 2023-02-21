@@ -18,5 +18,5 @@ class studentinfo:
         print("Total Marks: ", self.total_marks())
         print("Percentage :" , self.percentage())
         
-Student1 = studentinfo("Om" , 23 , [85 , 52 , 65 , 100 , 50])
+Student1 = studentinfo("Om" , 2 , [85 , 52 , 65 , 100 , 50])
 Student1.display_details()
