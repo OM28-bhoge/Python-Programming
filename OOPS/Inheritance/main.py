@@ -75,11 +75,10 @@ if __name__ == "__main__":
     ninad = Manager("Ninad", "Pangare", 50000, [om])
 
     print(ninad.email)
-
     ninad.add_employee(hardik)
 
     for emp in ninad.employees:
-        print("- ", emp.email)
+        print("- ", emp.email)                              
     # help(Developer)
 
 
